@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient(to left, #0f789b 0%, #faf8f9 100%);
+    /* background-image: -webkit-linear-gradient(left,rgb(143, 145, 134),rgb(250, 249, 249)); */
+}
+.title{
+background-color: aquamarine;
+text-align: center;
+width: 700px;
+margin: 25px auto ;
+font-size: 40px;
+padding: 10px 10px;
+
+}
+.area-content{
+    text-align: justify ;
+    margin: 30px 25px;
+    font-size: 35px;
+
+}
+.dong3{
+    background-color: aqua;
+    font-weight: bold;
+}
