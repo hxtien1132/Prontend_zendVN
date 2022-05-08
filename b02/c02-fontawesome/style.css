@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 600px;
+    padding: 10px;
+    background-color: brown;
+    text-align: center;
+    
+    margin: 30px auto;
+}
+a{
+
+    width: 100px;
+    height: 100px;
+     text-decoration: none;
+     display: inline-block;
+     background-color: antiquewhite;
+     border-radius: 50%;
+    
+  
+}
+
+p{
+    font-size: 50px;
+    line-height: 100px;
+
+}

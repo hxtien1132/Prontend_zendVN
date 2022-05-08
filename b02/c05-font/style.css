@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    }
+    div{
+        display: flex;
+        background-color: blue;
+        margin: 20px auto ;
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        /* c2:
+         display: block;
+        position: relative;
+        background-color: blueviolet;
+        width: 600px;
+        height: 300px;
+        margin: 20px auto;
+        text-align: center; */
+       
+       
+
+       
+
+    }
+    h1{
+     /*c2:
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+         */
+       color: antiquewhite;
+        font-family: 'Sansita Swashed', cursive;;
+    }
