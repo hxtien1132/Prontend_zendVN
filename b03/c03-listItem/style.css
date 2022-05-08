@@ -1,0 +1,46 @@
+.content{
+    box-sizing: border-box;
+    width: 1300px;
+    background-color: aqua;
+    text-align: center;
+    margin: 50px auto;
+    
+    
+}
+.text1, .text2{
+    display: inline;
+    
+    
+}
+.p1 {
+    
+    display: inline-block;
+    width: 300px;
+    
+    background-color: rgb(207, 137, 52);
+    
+}
+.p2{
+    
+    display: inline-block;
+    width: 300px;
+    
+    background-color: rgb(83, 114, 9);
+    
+}
+.p3{
+    
+    display: inline-block;
+    width: 300px;
+    
+    background-color: rgb(78, 25, 223);
+    
+}
+.p4 {
+    
+    display: inline-block;
+    width: 300px;
+    
+    background-color: rgb(231, 14, 14);
+    
+}

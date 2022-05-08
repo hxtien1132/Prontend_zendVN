@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header {
+    background-color: aqua;
+    font-size: 35px;
+    text-align: center;
+    padding: 50px;
+    line-height: 50px;
+
+}
+
+nav.navbar {
+    background-color: black;
+    
+
+}
+
+nav.nav-bar ul {
+    list-style: none;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    
+}
+
+nav.nav-bar ul li {
+    padding: 10px 45px;
+}
+
+section {
+    display: flex;
+    padding: 10px 0px;
+     flex-direction: row;
+}
+
+section nav {
+    flex: 1;
+}
+
+section article {
+    display: flex;
+    flex: 3;
+    text-align: center;
+    
+    
+
+}
+article.art1{
+    flex-direction: column;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    
+    padding: 10px 0px;
+}
+article.art1 .text1{
+    padding-bottom: 50px;
+}
+
+footer{
+    padding-top: 0px;
+}
+footer p {
+    text-align: center;
+    border-top: 1px solid brown;
+    height: 30px;
+    line-height: 30px;
+    
+
+}
+nav.link1 ul {
+    list-style: circle;
+    padding: 20px 30px;
+    
+}
+nav.link2 ul{
+    list-style: circle;
+    padding: 20px 30px;
+    
+
+}
+.meo{
+    padding-left:25px;
+}
+.chu{
+    text-align: left;
+    padding-left: 10px;
+}
+.chu2{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: blue;
+    text-decoration: underline;
+}
+img{
+    height: 100px;
+}

@@ -1,0 +1,21 @@
+
+table{
+    border: 2px solid rgb(124, 82, 4);
+}
+tr{
+    margin: 20px auto;
+    background-color: antiquewhite;
+
+}
+td ,th {
+    text-align: left;
+    border: 1px saddlebrown solid;
+
+   
+}
+p , button{
+    text-align: center;
+}
+
+
+
