@@ -1,0 +1,8 @@
+div.box{
+    margin: 10px;
+    float: left;
+    background-color: burlywood;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
