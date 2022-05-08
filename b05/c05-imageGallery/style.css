@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+    
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    text-shadow:  0 0 10px seashell; 
+    box-shadow: 0  4px 8px rgb(93, 189, 4);
+}
+.gallery{
+    display: flex;
+    width: 800px;
+    margin:auto ;
+    height: 400px;
+    box-shadow: 0 4px 8px rgb(93, 189, 4);
+    border-radius: 5px ;
+
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover ;
+}
+.item{
+    flex: 1 ;
+    transition: 0.4s;
+}
+.item:hover{
+    flex-basis: 55%;
+}

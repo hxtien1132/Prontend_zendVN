@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: url(images/xps-Gi3iUJ1FwxI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.menu{
+    max-width: 1200px;
+    margin:  auto;
+    padding: 0 15px;
+  
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav{
+    
+    background-color: aliceblue;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+a.logo{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    margin-right: 15px;
+    transition: 0.4s;
+}
+li.active{
+    
+    background-color: rgb(16, 146, 206);
+    border-radius: 3px;
+    padding: 1px 2px;
+    
+}
+ul li:hover a{
+    background-color: aquamarine;
+    color: blue;
+    border-radius: 3px;
+    padding: 1px 2px;
+    transition: 0.4s;
+    
+}
+label{
+    font-size: 20px;
+    cursor: pointer;
+    /* cursor: pointer;  */
+    /* khi con chuột hover tới biến thành bàn tay */
+    display: none;
+}
+#label{
+    font-size: 20px;
+    display: none;
+    
+
+}
+@media screen and (max-width:768px) {
+    nav{
+        flex-wrap: wrap;
+    }
+    ul{display: none;}
+    ul li{
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    label{display: unset;}
+    #label:checked + ul{
+        display: block;
+         width: 100%;
+
+    }
+    
+}
