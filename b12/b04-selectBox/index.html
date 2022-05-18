@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bài phone</title>
+  <link rel="stylesheet" href="css/intlTelInput.css">
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body>
+  <h1>Số điện thoại</h1>
+  <form>
+    <input id="phone" name="phone" type="tel">
+    <button type="submit">Gửi</button>
+  </form>
+
+  <script src="js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "js/utils.js",
+    });
+  </script>
+</body>
+
+</html>
