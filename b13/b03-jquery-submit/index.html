@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> FORM</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Form </h1>
+    <form method="post" action="http://api.zdemo.xyz/check-login" id="f">
+        <div class="container">
+            <p class="msg hidden" id="msg-all"></p>
+            <label>Username </label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required autocomplete="off">
+            <p class="error" id="msg-username"></p>
+            <label>Password </label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <p class="error" id="msg-password"></p>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+
+</html>
+<script>
+        $(document).ready(function () {
+            function hasLowerCase(str) {
+                return str.toUpperCase() == str;
+            }
+
+            function isNumber(str) {
+                return !isNaN(str);
+            }
+            var SetErrorUsername = function (msg){
+                if(msg==""){
+                    $("#msg-username").text("")
+                    $("#msg-username").attr("class","");
+                }
+                else
+                {
+                    $("#msg-username").attr("class","error");
+                    $("#msg-username").text(msg);
+                }
+               
+            }
+
+            var SetErrorPassword = function (msg){
+                if(msg==""){
+                    $("#msg-password").text("");
+                    $("#msg-password").attr("class","");
+                }
+                else
+                {
+                    $("#msg-password").attr("class","error");
+                    $("#msg-password").text(msg);
+                }
+            }
+            
+            var SetErrorAll = function (msg){
+                var e = $("#msg-all");
+                e.Show();
+                e.text(msg);
+            }
+
+            $("form").submit(function (e) {
+                e.preventDefault();
+                var u = $("#username").val();
+                var p = $("#password").val();
+                var u_stt = false, p_stt = false;
+
+
+                if (u.length < 5 || u.length > 10) {
+                    SetErrorUsername("Tên đăng nhập phải bao gồm 5-10 ký tự !");
+                }
+                else {
+                    SetErrorUsername("")
+                    for (var i = 0; i < u.length; i++) {
+                        if (isNumber(u[i])) {
+                            SetErrorUsername("Tên đăng nhập không được chứa chữ số !")
+                            break;
+                        }
+                        else
+                        {
+                            SetErrorUsername("")
+                            u_stt =true;
+                        }
+                        
+                        if(hasLowerCase(u[i])){
+                            SetErrorUsername("Tên đăng nhập không được chứa ký tự in hoa !")
+                            break;
+                        }
+                        else
+                        {
+                            SetErrorUsername("")
+                            u_stt =true;
+                        }
+                    }                
+                }
+
+                var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{3,6}$/;
+                if(p.length < 3 || p.length>6){
+                    console.log(p.length,' do dai')
+                            SetErrorPassword("Mật khẩu phải bao gồm 3-6 ký tự !")                         
+                        }
+                        else
+                        {
+                            SetErrorPassword()
+
+                            if(!reg.test(p)){
+                                SetErrorPassword("Mật khẩu không hợp lệ!")
+                            }
+                            else
+                            {
+                                SetErrorPassword("")
+                                console.log('ok')
+                                p_stt =true;
+                            }                            
+                        }
+
+                if(u_stt && p_stt){
+                    console.log('gửi data...')
+                    $(".container>*").remove()
+                    var p = $("<p/>");
+                    p.text("Bạn đã đăng nhập thành công!");
+
+                    $(".container").append(p)
+                }
+            })
+        })
+</script>

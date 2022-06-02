@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Giá vàng</title>
+    <style>
+        table {
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fdfcfc;
+        }
+
+        tr>th {
+            background: yellow;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery.js"></script>
+</head>
+
+<body>
+
+    <h2>Giá vàng</h2>
+
+    <table id="tab">
+        <tr>
+            <th>Loại vàng</th>
+            <th>Mua vào</th>
+            <th>Bán ra</th>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $.getJSON("data.json", function(data) {
+
+            var tab = $("#tab");
+
+            for (var i = 0; i < data.length; i++) {
+                var e = data[i];
+                var row = $("<tr/>");
+                var d1 = $("<td/>");
+                d1.text(e.type)
+                var d2 = $("<td/>");
+                d2.text(e.buy)
+                var d3 = $("<td/>");
+                d3.text(e.sell)
+
+                row.append(d1)
+                row.append(d2)
+                row.append(d3)
+                tab.append(row)
+            }
+        })
+    })
+</script>
